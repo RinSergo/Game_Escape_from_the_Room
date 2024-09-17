@@ -1,0 +1,50 @@
+﻿<Window x:Class="Game_Escape_from_the_Room.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Escape_from_the_Room"
+        mc:Ignorable="d"
+        Title="Escape from the Room" Height="600" Width="400" WindowStyle="ThreeDBorderWindow">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="button_style" TargetType="Button">
+            <Border x:Name="buttonBorder" 
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="buttonBorder" Property="Background" Value="#b9955c" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    
+    <Grid x:Name="MainRoot" Background="#dcd4bf">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="144*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="49*" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="TextLabel" Grid.Row="1" TextWrapping="Wrap" Text="Вы осматриваетесь, и ваш взгляд почти сразу падает на каменную статую, застывшую у двери. Ладони трёх её протянутых вперёд рук сложены горстьми - как будто перед вами одно из индийских божеств, требующее жертв. Впрочем, вряд ли оно ответит на ваши вопросы. Надо попробовать выйти..." FontSize="14" FontWeight="Bold" Margin="10,0,10,10"/>
+        <Button Template="{StaticResource button_style}" Content="Открыть дверь" Background="#bea16f"  HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="134" FontSize="14" FontWeight="Bold"/>
+        <Button Template="{StaticResource button_style}" Content="Заглянуть под кровать" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="190" FontSize="14" FontWeight="Bold"/>
+        <Button Template="{StaticResource button_style}" Content="Открыть ящик в углу комнаты" Background="#bea16f" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" Width="240" FontSize="14" FontWeight="Bold"/>
+        <Button Template="{StaticResource button_style}" Content="Открыть вентиляцию" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="181" FontSize="14" FontWeight="Bold"/>
+        <Button Template="{StaticResource button_style}" Content="Взглянуть на тумбочку" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="190" FontSize="14" FontWeight="Bold"/>
+        <Button Template="{StaticResource button_style}" Content="Взглянуть на статую рядом с дверью" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="7" VerticalAlignment="Center" Width="285" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="hiddenButton" Template="{StaticResource button_style}" Content="Выйти из комнаты" Background="#bea16f" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" Grid.Row="8" VerticalAlignment="Top" Width="161" Click="Button_Click_1" FontWeight="Bold" FontSize="14" Visibility="Hidden"/>
+    </Grid>
+</Window>
