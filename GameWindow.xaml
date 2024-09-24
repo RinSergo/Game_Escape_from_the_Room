@@ -24,7 +24,7 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Window.Resources>
-    
+
     <Grid x:Name="MainRoot" Background="#dcd4bf">
         <Grid.RowDefinitions>
             <RowDefinition Height="49*" />
@@ -45,6 +45,6 @@
         <Button Template="{StaticResource button_style}" Content="Открыть вентиляцию" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="181" FontSize="14" FontWeight="Bold"/>
         <Button Template="{StaticResource button_style}" Content="Взглянуть на тумбочку" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="190" FontSize="14" FontWeight="Bold"/>
         <Button Template="{StaticResource button_style}" Content="Взглянуть на статую рядом с дверью" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="7" VerticalAlignment="Center" Width="285" FontSize="14" FontWeight="Bold"/>
-        <Button x:Name="hiddenButton" Template="{StaticResource button_style}" Content="Выйти из комнаты" Background="#bea16f" HorizontalAlignment="Left" Height="39" Margin="10,10,0,0" Grid.Row="8" VerticalAlignment="Top" Width="161" Click="Button_Click_1" FontWeight="Bold" FontSize="14" Visibility="Hidden"/>
+        <Button x:Name="hiddenButton" Template="{StaticResource button_style}" Content="Выйти из комнаты" Background="#bea16f" HorizontalAlignment="Left" Height="29" Margin="10,0,0,0" Grid.Row="8" VerticalAlignment="Center" Width="158" Click="Button_Click_1" FontWeight="Bold" FontSize="14" Visibility="Hidden"/>
     </Grid>
 </Window>

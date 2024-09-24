@@ -27,14 +27,8 @@
                         SnapsToDevicePixels="true">
                         <ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                     </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="textBoxBorder" Property="BorderBrush" Value="#5c523c" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </TextBox.Template>
-            
         </TextBox>
         
         <Button Click="Button_Click" Content="Да, это я!" Background="#5c523c" Height="24" Width="86" Margin="0,179,19,0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Right" BorderBrush="{x:Null}" FontWeight="Bold">
